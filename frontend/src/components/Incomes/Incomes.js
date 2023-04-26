@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { InnerLayout } from '../../styles/layouts';
 import { useGlobalContext } from '../../context/gloablContext';
+import Form from '../Form/Form';
 
 
 function Incomes(){
@@ -11,7 +12,9 @@ function Incomes(){
             <InnerLayout>
             <h1>Incomes</h1>
             <div className="income-contnet">
-                <div className="form-container"> </div> 
+                <div className="form-container">
+                    <Form/>
+                 </div> 
                 <div className="incomes">
                       
                 </div>
