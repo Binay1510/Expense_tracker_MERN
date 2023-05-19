@@ -9,7 +9,7 @@ function Navigation({active,setActive}){
     
     return (
         <NavStyled>
-            <div className='user-con'>
+            <div className='user-con'>          
                 <img src={avatar} alt ="" />
                 <div className='text'>
                     <h2>Binay</h2>
