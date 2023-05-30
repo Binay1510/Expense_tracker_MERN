@@ -1,4 +1,5 @@
 import React ,{useMemo, useState} from 'react'
+
 import styled from "styled-components";
 import bg from './img/bg.png'
 import { MainLayout } from "./styles/layouts";
@@ -8,8 +9,12 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Income from './components/Incomes/Incomes';
 import Expenses from './components/Expenses/Expenses';
 import { useGlobalContext } from './context/gloablContext';
+
+
+
 function App(){
     const [active ,serActive] =React.useState(1)
+  
 
     const global= useGlobalContext()
     console.log(global);
@@ -19,12 +24,12 @@ function App(){
         switch(active){
             case 1:
               return <Dashboard />
+          
             case 2:
-              return <Dashboard />
-            case 3:
               return <Income />
-            case 4: 
+            case 3: 
               return <Expenses />
+           
             default: 
               return <Dashboard />
           }
@@ -41,6 +46,7 @@ function App(){
                     <Navigation active={active} setActive={serActive} />
                     <main>
                         {displayData()}
+                        
                     </main>
                   </MainLayout>
         </AppStyled>

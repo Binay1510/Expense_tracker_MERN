@@ -6,22 +6,19 @@ const app = express()
 
 require('dotenv').config()
 
-const PORT=  process.env.PORT 
+const PORT = process.env.PORT
 
-//midlewares
+//middlewares
 app.use(express.json())
 app.use(cors())
 
 //routes
-readdirSync('./routes').map((route)=> app.use('/api/v1',require('./routes/'+route)))
+readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
 
-
-
-
-const server =() =>{
+const server = () => {
     db(db)
-    app.listen(PORT, ()=>{
-        console.log('Listening to port',PORT)
+    app.listen(PORT, () => {
+        console.log('listening to port:', PORT)
     })
 }
 

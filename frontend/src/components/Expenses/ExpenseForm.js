@@ -12,7 +12,7 @@ function ExpenseForm() {
 
     
     const [inputState, setInputState] = useState({
-        title: '',
+        title: '', 
         amount: '',
         date: '',
         category: '',
@@ -24,6 +24,7 @@ function ExpenseForm() {
     const handleInput = name => e => {
         setInputState({...inputState, [name]: e.target.value})
         setError('')
+          
     }
     const handleSubmit = e => {
         e.preventDefault()
@@ -42,7 +43,7 @@ function ExpenseForm() {
 
     return (
         <ExpenseFormStyled  onSubmit={handleSubmit}> 
-         {error && <p className="error">{error}</p>}
+         {error && <p className='error'>{error}</p>}
             <div className="input-control">
             <input 
                     type="text" 

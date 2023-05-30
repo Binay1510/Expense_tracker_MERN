@@ -1,5 +1,6 @@
-import React ,{useContext, useState} from "react";
+import React ,{useContext, useState} from "react"
 import axios from 'axios'
+
 const BASE_URL = "http://localhost:5000/api/v1/";
 
 
@@ -84,6 +85,8 @@ export const GlobalProvider =({children}) => {
         const totalBalance = () => {
             return totalIncome() - totalExpenses()
         }
+
+        
     
         const transactionHistory = () => {
             const history =[...incomes, ...expenses]
@@ -110,11 +113,12 @@ export const GlobalProvider =({children}) => {
             transactionHistory,
             error,
             setError
+            
         }}>
             {children}
         </GlobalContext.Provider>
     )
-}
+} 
 
 
 export const useGlobalContext = () => {
