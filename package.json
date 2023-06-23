@@ -7,5 +7,16 @@
     "react-alert-template-basic": "^1.0.2",
     "react-scripts": "^5.0.1",
     "reactjs-popup": "^2.0.5"
-  }
+  },
+  "name": "expense_tracker",
+  "description": "Expense Tracker application using MERN\r # Getting Started with Create React App",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
