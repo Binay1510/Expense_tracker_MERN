@@ -12,7 +12,9 @@
   "description": "Expense Tracker application using MERN\r # Getting Started with Create React App",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  },
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
